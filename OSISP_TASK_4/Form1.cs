@@ -20,7 +20,12 @@ namespace OSISP_TASK_4
         private void Form1_Load(object sender, EventArgs e)
         {
             Random random = new Random();
-            randomNumbersLabel.Text = random.Next(1000, 10000).ToString();
+            string resultNumber = "";
+            for(int i = 0; i < 4; i++)
+            {
+                resultNumber += random.Next(0, 10);
+            }
+            randomNumbersLabel.Text = resultNumber;
         }
     }
 }
